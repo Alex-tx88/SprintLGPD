@@ -38,24 +38,36 @@
             <div>
                 <h2 class="titulo">Sobre Você</h2>
             <form onsubmit="Post(this); return false;">
-            <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-    
-            <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-    
-            <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-    
-        <select name="contato" class="fordform" required>
-            <option value="" disabled selected>TIPO DE CONTATO</option>
-            <option value="elogio">ELOGIO</option>
-            <option value="reclamcao">RECLAMAÇÃO</option>
-            <option value="solicitacao">SOLICITAÇÃO</option>
-
-        </select>
-    
-    <label for="mensagem">Mensagem</label>
-    <textarea name="mensagem" id="mensagem" placeholder="ESCREVA SUA MENSAGEM" rows="5" class="fordform" required></textarea>
-    
-    <button type="submit">Enviar</button>
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+        
+                <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
+        
+                <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+        
+                <select name="contato" class="fordform" required>
+                    <option value="" disabled selected>TIPO DE CONTATO</option>
+                    <option value="elogio">ELOGIO</option>
+                    <option value="reclamcao">RECLAMAÇÃO</option>
+                    <option value="solicitacao">SOLICITAÇÃO</option>
+                </select>
+        
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="ESCREVA SUA MENSAGEM" rows="5" class="fordform" required></textarea>
+                
+                <div style="text-align: left; margin: 8px; font-size: 13px; width: 310px; line-height: 1.4; color: #555;">
+                    <p style="margin-bottom: 10px;">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados.</p>
+                    
+                    <div style="margin-bottom: 5px;">
+                        <input type="checkbox" id="termos" name="termos" onchange="document.getElementById('btnEnviar').disabled = !this.checked;">
+                        <label for="termos">Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank" style="color: #1351d8; text-decoration: underline;">Termos e Condições</a>.</label>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <input type="checkbox" id="novidades" name="novidades">
+                        <label for="novidades">Sim. Também quero receber descontos e novidades.</label>
+                    </div>
+                </div>
+                <button type="submit" id="btnEnviar" disabled>Enviar</button>
             </form>
         </div>
     </main>
