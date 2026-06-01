@@ -28,6 +28,7 @@ function Post(form) {
     
    
     form.reset();
+    document.getElementById('btnEnviar').disabled = true;
 }
 
 
